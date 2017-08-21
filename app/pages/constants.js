@@ -12,6 +12,7 @@ import msgIcon from '../assets/icon_message.png';
 import serviceIcon from '../assets/icon_service.png';
 import inviteIcon from '../assets/icon_invite.png';
 import setIcon from '../assets/icon_set.png';
+import backIcon from '../assets/icon_back.png';
 
 export const icons = {
   avatarBg,
@@ -22,5 +23,6 @@ export const icons = {
   msgIcon,
   serviceIcon,
   inviteIcon,
-  setIcon
+  setIcon,
+  backIcon
 };

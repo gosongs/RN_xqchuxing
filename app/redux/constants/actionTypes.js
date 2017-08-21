@@ -1,2 +1,4 @@
 export const TOGGLE_MENU = 'TOGGLE_MENU';
 export const GET_USER_INFO = 'GET_USER_INFO';
+export const SET_PROGRESS = 'SET_PROGRESS';
+export const GET_ACTIVITY_LIST = 'GET_ACTIVITY_LIST';

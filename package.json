@@ -8,9 +8,15 @@
     "test": "jest"
   },
   "dependencies": {
+    "ac-qrcode": "^1.0.1",
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.1",
+    "react-native-camera": "^0.10.0",
+    "react-native-progress": "^3.3.0",
+    "react-native-progress-bar": "^0.1.2",
     "react-native-side-menu": "^1.0.2",
+    "react-native-simple-toast": "0.0.6",
+    "react-navigation": "^1.0.0-beta.11",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",

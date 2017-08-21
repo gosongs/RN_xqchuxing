@@ -4,7 +4,7 @@ export default StyleSheet.create({
   wrap: {
     height: 65,
     borderBottomWidth: 1,
-    borderBottomColor: '#afaca6',
+    borderBottomColor: '#aaa',
     backgroundColor: '#f7f7f7',
     paddingTop: 0,
     paddingRight: 20,

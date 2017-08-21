@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import * as reducers from './redux/reducers';
 import { View, Text } from 'react-native';
-import Home from './pages/Home/index';
+import AppWithNavigationState from './pages/App/index';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const reducer = combineReducers(reducers);
@@ -14,7 +14,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Home />
+        <AppWithNavigationState />
       </Provider>
     );
   }

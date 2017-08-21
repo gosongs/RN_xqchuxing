@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { View, Text } from 'react-native';
 import SideMenu from 'react-native-side-menu';
 import styles from './styles';
-import { toggleMenu, getUserInfo } from './../../redux/actions/bike';
+import { toggleMenu, getUserInfo, setProgress } from './../../redux/actions/bike';
 
 import Head from '../Head/index';
 import Foot from '../Foot/index';
@@ -17,6 +17,10 @@ const propTypes = {};
 const defaultProps = {};
 
 class Home extends Component {
+  static navigationOptions = {
+    header: null // hide nagivation header
+  };
+
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
@@ -57,7 +61,7 @@ class Home extends Component {
           <Head />
           <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Text>
 
-          <Foot />
+          <Foot {...this.props} />
         </View>
       </SideMenu>
     );
@@ -81,6 +85,9 @@ const mapDispatchToProps = dispatch => {
     },
     getUserInfo: params => {
       return dispatch(getUserInfo(params));
+    },
+    setProgress: params => {
+      return dispatch(setProgress(params));
     }
   }
 };

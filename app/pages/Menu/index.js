@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Dimensions, StyleSheet, ScrollView, View, Image, Text } from 'react-native';
+import { Dimensions, StyleSheet, ScrollView, View, Image, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 import { icons } from '../constants';
 import defaultAvatar from '../../assets/icon_path_heard.png';
@@ -19,6 +19,7 @@ class Menu extends Component {
     const headImageUrl = userInfo ? userInfo.headImageUrl : ""; // 头像地址
 
     const avatarUrl = headImageUrl ? { uri: headImageUrl } : defaultAvatar;
+    const { navigate } = this.props.navigation;
     return (
       <ScrollView scrollsToTop={false} style={styles.menu}>
         <View style={styles.avatarContainer}>
@@ -60,7 +61,9 @@ class Menu extends Component {
 
           <View style={styles.listItem}>
             <Image style={styles.icon} source={icons.giftIcon} />
-            <Text style={styles.listItemTxt}>活动</Text>
+            <TouchableOpacity onPress={() => { navigate('ActivityList') }}>
+              <Text style={styles.listItemTxt}>活动</Text>
+            </TouchableOpacity>
           </View>
 
           <View style={styles.listItem}>
